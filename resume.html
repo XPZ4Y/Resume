@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Chris Toyd Fernandes</title>
+    <style>
+        :root {
+            --primary-color: #202124; /* Google Black */
+            --secondary-color: #5f6368; /* Google Gray */
+            --accent-color: #1a73e8; /* Google Blue */
+            --font-main: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.5;
+            color: var(--primary-color);
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        /* Sections */
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee; /* Visual separator */
+            padding-bottom: 5px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .skill-list {
+            font-weight: normal;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* Experience Items */
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+
+        .job-company {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: #3c4043;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <header>
+            <h1>Chris Toyd Fernandes</h1>
+            <div class="contact-info">
+                <a href="mailto:chris.fernandes@example.com">chris.fernandes@example.com</a> |
+                <a href="#">github.com/chris-toyd</a> |
+                <a href="#">linkedin.com/in/chris-toyd</a> |
+                <span>San Francisco, CA (Open to Relocation)</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p style="font-size: 0.95rem; color: #3c4043;">
+                Innovative AI Engineer with a focus on Deep Learning and Generative Models. Proven track record of transforming unstructured data into actionable insights through custom pipeline development. Passionate about scalability, algorithmic efficiency, and applying Machine Learning to novel, real-world scenarios.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <div class="skill-category">Languages</div>
+                    <div class="skill-list">Python, C++, SQL, JavaScript (ES6+), Bash</div>
+                </div>
+                <div>
+                    <div class="skill-category">Machine Learning</div>
+                    <div class="skill-list">PyTorch, TensorFlow, JAX, Scikit-learn, Keras</div>
+                </div>
+                <div>
+                    <div class="skill-category">Architectures</div>
+                    <div class="skill-list">Transformers (BERT, GPT), CNNs (ResNet, EfficientNet), RNN/LSTMs, GANs</div>
+                </div>
+                <div>
+                    <div class="skill-category">Tools & Cloud</div>
+                    <div class="skill-list">Docker, Kubernetes, GCP (Vertex AI), AWS (SageMaker), Git, CI/CD</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Engineering Projects & Experience</h2>
+
+            <div style="margin-bottom: 20px;">
+                <div class="job-header">
+                    <span class="job-title">Automated Visual Content Classification Engine</span>
+                    <span class="job-date">2024 – Present</span>
+                </div>
+                <div class="job-company">Personal Project (The "Meme-Archiver")</div>
+                <ul>
+                    <li>Designed a Computer Vision pipeline using <strong>ResNet-50</strong> to classify and index a dataset of 50,000+ unstructured images (memes) with 94.2% accuracy.</li>
+                    <li>Implemented OCR (Tesseract) to extract semantic text layers, enabling Natural Language querying of image files (e.g., searching images by context).</li>
+                    <li>Reduced manual sorting time by 99% through an automated Python script integrating file system operations.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <div class="job-header">
+                    <span class="job-title">Context-Aware Conversational Agent</span>
+                    <span class="job-date">2023 – 2024</span>
+                </div>
+                <div class="job-company">Personal Project (The "Roast-Bot")</div>
+                <ul>
+                    <li>Fine-tuned an open-source LLM (Llama-2-7b) on a custom dataset of satirical and adversarial dialogue to study style transfer in NLP.</li>
+                    <li>Optimized inference latency by 40% using quantization (4-bit) and model pruning, deploying the agent on consumer-grade hardware.</li>
+                    <li>Implemented RAG (Retrieval-Augmented Generation) to maintain long-term context retention during multi-turn interactions.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <div class="job-header">
+                    <span class="job-title">Predictive Analytics for Resource Allocation</span>
+                    <span class="job-date">2023</span>
+                </div>
+                <div class="job-company">Personal Project (Dietary Forecasting Model)</div>
+                <ul>
+                    <li>Developed a Time-Series forecasting model using <strong>LSTM networks</strong> to predict personal caloric requirements and delivery logistics based on historical spending data.</li>
+                    <li>Engineered features including time-of-day, mood analysis (via text logs), and weather patterns to minimize delivery latency errors.</li>
+                    <li>Visualized spending habits using Matplotlib and Pandas, identifying key areas for 15% monthly budget optimization.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="job-header">
+                <span class="job-title">Bachelor of Science in Computer Science / AI</span>
+                <span class="job-date">Graduated 2023</span>
+            </div>
+            <div class="job-company">University of Technology</div>
+            <ul style="margin-top: 5px;">
+                <li>Relevant Coursework: Data Structures & Algorithms, Deep Learning, Linear Algebra, Probability Theory.</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
